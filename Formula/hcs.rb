@@ -1,22 +1,41 @@
+cat > $FORMULA_PATH <<EOF
 class Hcs < Formula
   desc "Your awesome CLI tool"
-  homepage "https://github.com/omniscient-public/hcs-binaries"
-  version "v0.2.1"
+  homepage "https://github.com/$BIN_REPO"
+  version "${{ env.VERSION }}"
   license "MIT"
-        
-  if OS.mac?
-    url "https://github.com/omniscient-public/hcs-binaries/releases/download/v0.2.1/hcs-darwin-amd64.tar.gz"
-    sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
-  elsif OS.linux?
-    url "https://github.com/omniscient-public/hcs-binaries/releases/download/v0.2.1/hcs-linux-amd64.tar.gz"
-    sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+
+  on_macos do
+    on_intel do
+      url "https://github.com/$BIN_REPO/releases/download/${{ env.VERSION }}/${{ env.TOOL_NAME }}-darwin-amd64.tar.gz"
+      sha256 "${{ steps.sha.outputs.darwin_amd64_sha }}"
+    end
+
+    on_arm do
+      url "https://github.com/$BIN_REPO/releases/download/${{ env.VERSION }}/${{ env.TOOL_NAME }}-darwin-arm64.tar.gz"
+      sha256 "${{ steps.sha.outputs.darwin_arm64_sha }}"
+    end
   end
-        
+
+  on_linux do
+    on_intel do
+      url "https://github.com/$BIN_REPO/releases/download/${{ env.VERSION }}/${{ env.TOOL_NAME }}-linux-amd64.tar.gz"
+      sha256 "${{ steps.sha.outputs.linux_amd64_sha }}"
+    end
+
+    on_arm do
+      url "https://github.com/$BIN_REPO/releases/download/${{ env.VERSION }}/${{ env.TOOL_NAME }}-linux-arm64.tar.gz"
+      sha256 "${{ steps.sha.outputs.linux_arm64_sha }}"
+    end
+  end
+
   def install
-    bin.install "hcs"
+    bin.install "${{ env.TOOL_NAME }}"
   end
-        
+
   test do
-    system "#{bin}/hcs", "--version"
+    system "#{bin}/${{ env.TOOL_NAME }}", "--version"
   end
 end
+EOF
+
