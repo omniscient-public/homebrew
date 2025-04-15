@@ -7,24 +7,24 @@ class Hcs < Formula
   on_macos do
     on_intel do
       url "https://github.com/omniscient-public/hcs-binaries/releases/download/v0.2.2/hcs-darwin-amd64.tar.gz"
-      sha256 "59cc6511a8dcbe02ac6cac8cfa818ed529ccf89785d01fcf50803032cab00369"
+      sha256 "90f3181fd726b3311d5c37fac56df6ecde2bcd2b22205308312877fc3840e414"
     end
         
     on_arm do
       url "https://github.com/omniscient-public/hcs-binaries/releases/download/v0.2.2/hcs-darwin-arm64.tar.gz"
-      sha256 "1ff2714cb9283ed48e53424f05f766ace115fd6f49935d4b551d752a6c4b602e"
+      sha256 "0c86a4153d70cbe661c65fe6ad1ec8041d233dc201bd268de2c4a731f9203971"
     end
   end
         
   on_linux do
     on_intel do
       url "https://github.com/omniscient-public/hcs-binaries/releases/download/v0.2.2/hcs-linux-amd64.tar.gz"
-      sha256 "5b4339470fcb91c5693ae612f558aa2c455b03b82592e656997922fcf4995a0f"
+      sha256 "cca4dd19173004bbf5df0fe1970e79490a9621ffbcee48eeb9e148eb93a61c90"
     end
         
     on_arm do
       url "https://github.com/omniscient-public/hcs-binaries/releases/download/v0.2.2/hcs-linux-arm64.tar.gz"
-      sha256 "87b5ecdf32108664fd24a99093a1f6a49ba50634777ac30b89725d3dac72b8ad"
+      sha256 "b5065999dba45fa1f98713bcaeb14c09bed005390f32ca5d709c913fc9f153b0"
     end
   end
         
