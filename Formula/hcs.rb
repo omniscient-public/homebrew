@@ -1,30 +1,30 @@
 class Hcs < Formula
   desc "Your awesome CLI tool"
   homepage "https://github.com/omniscient-public/hcs-binaries"
-  version "v0.2.2"
+  version "v0.2.3"
   license "MIT"
         
   on_macos do
     on_intel do
-      url "https://github.com/omniscient-public/hcs-binaries/releases/download/v0.2.2/hcs-darwin-amd64.tar.gz"
-      sha256 "90f3181fd726b3311d5c37fac56df6ecde2bcd2b22205308312877fc3840e414"
+      url "https://github.com/omniscient-public/hcs-binaries/releases/download/v0.2.3/hcs-darwin-amd64.tar.gz"
+      sha256 "03f8df045ee06fe520f4c388a6e0a1c24ea6dba67bf868c307930a360d59797d"
     end
         
     on_arm do
-      url "https://github.com/omniscient-public/hcs-binaries/releases/download/v0.2.2/hcs-darwin-arm64.tar.gz"
-      sha256 "0c86a4153d70cbe661c65fe6ad1ec8041d233dc201bd268de2c4a731f9203971"
+      url "https://github.com/omniscient-public/hcs-binaries/releases/download/v0.2.3/hcs-darwin-arm64.tar.gz"
+      sha256 "102243e2382504e96adeab41bbfaa2200ae94d68d2bc44944389cff13a246f50"
     end
   end
         
   on_linux do
     on_intel do
-      url "https://github.com/omniscient-public/hcs-binaries/releases/download/v0.2.2/hcs-linux-amd64.tar.gz"
-      sha256 "cca4dd19173004bbf5df0fe1970e79490a9621ffbcee48eeb9e148eb93a61c90"
+      url "https://github.com/omniscient-public/hcs-binaries/releases/download/v0.2.3/hcs-linux-amd64.tar.gz"
+      sha256 "7213f923a9e572e40d202742b3dd17726c59196ceb684a6923bdccc7e2ecca7b"
     end
         
     on_arm do
-      url "https://github.com/omniscient-public/hcs-binaries/releases/download/v0.2.2/hcs-linux-arm64.tar.gz"
-      sha256 "b5065999dba45fa1f98713bcaeb14c09bed005390f32ca5d709c913fc9f153b0"
+      url "https://github.com/omniscient-public/hcs-binaries/releases/download/v0.2.3/hcs-linux-arm64.tar.gz"
+      sha256 "727394da244a198a1715cd412b0ccce9cf215d91fabd9f19d6b3b8ccf4f1af5a"
     end
   end
         
