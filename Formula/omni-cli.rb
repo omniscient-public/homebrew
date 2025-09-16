@@ -6,33 +6,33 @@ class OmniCli < Formula
         
   on_macos do
     on_intel do
-      url "https://github.com/omniscient-public/binaries/releases/download/0.2.26/omni-darwin-amd64.tar.gz"
+      url "https://github.com/omniscient-public/binaries/releases/download/0.2.26/omni-cli-darwin-amd64.tar.gz"
       sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     end
         
     on_arm do
-      url "https://github.com/omniscient-public/binaries/releases/download/0.2.26/omni-darwin-arm64.tar.gz"
+      url "https://github.com/omniscient-public/binaries/releases/download/0.2.26/omni-cli-darwin-arm64.tar.gz"
       sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     end
   end
         
   on_linux do
     on_intel do
-      url "https://github.com/omniscient-public/binaries/releases/download/0.2.26/omni-linux-amd64.tar.gz"
+      url "https://github.com/omniscient-public/binaries/releases/download/0.2.26/omni-cli-linux-amd64.tar.gz"
       sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     end
         
     on_arm do
-      url "https://github.com/omniscient-public/binaries/releases/download/0.2.26/omni-linux-arm64.tar.gz"
+      url "https://github.com/omniscient-public/binaries/releases/download/0.2.26/omni-cli-linux-arm64.tar.gz"
       sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     end
   end
         
   def install
-    bin.install "omni"
+    bin.install "omni-cli"
   end
         
   test do
-    system "#{bin}/omni", "--version"
+    system "#{bin}/omni-cli", "--version"
   end
 end
