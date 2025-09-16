@@ -1,4 +1,4 @@
-class Hcs < Formula
+class OmniCli < Formula
   desc "Omniscient Configuration Management CLI"
   homepage "https://github.com/omniscient-public/binaries"
   version "0.2.26"
