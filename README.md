@@ -3,11 +3,11 @@
 ## Installation
 Install the Omniscient CLI with 
 ```sh
-brew install omniscient-public/homebrew/omni-cli
+brew install omniscient-public/cli/omni-cli
 ```
 
 ## Usage
 Once installed, you can check that the CLI was successfully installed with
 ```sh
-omni -V
+omni-cli -V
 ```
